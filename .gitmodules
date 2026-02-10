@@ -1,0 +1,6 @@
+[submodule "patientor_backend"]
+	path = patientor_backend
+	url = https://github.com/Miguel565/patientor-backend
+[submodule "gym"]
+	path = gym
+	url = https://github.com/Miguel565/gym
