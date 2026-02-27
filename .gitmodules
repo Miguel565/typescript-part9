@@ -4,3 +4,9 @@
 [submodule "gym"]
 	path = gym
 	url = https://github.com/Miguel565/gym
+[submodule "flight_diary_backend"]
+	path = flight_diary_backend
+	url = https://github.com/Miguel565/flight_diary_backend
+[submodule "patientor_frontend"]
+	path = patientor_frontend
+	url = https://github.com/Miguel565/patientor
