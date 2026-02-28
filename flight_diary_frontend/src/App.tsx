@@ -5,6 +5,7 @@ import type { DiaryEntry } from './types';
 import diaryService from './services/entryService';
 
 import DiaryList from './components/DiaryList';
+import DiaryEntryForm from './components/DiaryEntryForm';
 
 const App = () => {
   const [diary, setDiary] = useState<DiaryEntry[]>([]);
@@ -22,6 +23,7 @@ const App = () => {
     <>
       <h1>Flight Diaries Entry</h1>
       <DiaryList diaries={diary} />
+      <DiaryEntryForm />
     </>
   )
 }

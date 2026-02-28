@@ -20,3 +20,5 @@ export interface DiaryEntry {
     visibility: Visibility;
     weather: Weather;
 }
+
+export type NewDiaryEntry = Omit<DiaryEntry, 'id'>;
