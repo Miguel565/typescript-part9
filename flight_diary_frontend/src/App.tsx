@@ -22,8 +22,8 @@ const App = () => {
   return (
     <>
       <h1>Flight Diaries Entry</h1>
-      <DiaryList diaries={diary} />
       <DiaryEntryForm />
+      <DiaryList diaries={diary} />
     </>
   )
 }
