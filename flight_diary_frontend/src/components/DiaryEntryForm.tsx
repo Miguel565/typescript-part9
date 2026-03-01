@@ -61,7 +61,7 @@ const DiaryEntryForm = () => {
                     <label>
                         Date:
                         <input
-                            type="text"
+                            type="date"
                             name="date"
                             onChange={({ target }) => setDate(target.value)}
                             required
@@ -69,32 +69,38 @@ const DiaryEntryForm = () => {
                     </label>
                 </div>
                 <div>
-                    <label>
-                        Visibility:
-                        <select
-                            name="visibility"
-                            onChange={({ target }) => setVisibility(target.value as Visibility)}
-                        >
-                            <option value="">Select visibility</option>
-                            {visibilityOptions.map(v => (
-                                <option key={v.value} value={v.value}>{v.label}</option>
-                            ))}
-                        </select>
-                    </label>
+                    <fieldset>
+                        <legend>Visibility</legend>
+                        {visibilityOptions.map(v => (
+                            <label key={v.value}>
+                                <input
+                                    type="radio"
+                                    name="visibility"
+                                    value={v.value}
+                                    checked={visibility === v.value}
+                                    onChange={() => setVisibility(v.value)}
+                                />
+                                {v.label}
+                            </label>
+                        ))}
+                    </fieldset>
                 </div>
                 <div>
-                    <label>
-                        Weather:
-                        <select
-                            name="weather"
-                            onChange={({ target }) => setWeather(target.value as Weather)}
-                        >
-                            <option value="">Select weather</option>
-                            {weatherOptions.map(w => (
-                                <option key={w.value} value={w.value}>{w.label}</option>
-                            ))}
-                        </select>
-                    </label>
+                    <fieldset>
+                        <legend>Weather</legend>
+                        {weatherOptions.map(w => (
+                            <label key={w.value}>
+                                <input
+                                    type="radio"
+                                    name="weather"
+                                    value={w.value}
+                                    checked={weather === w.value}
+                                    onChange={() => setWeather(w.value)}
+                                />
+                                {w.label}
+                            </label>
+                        ))}
+                    </fieldset>
                 </div>
                 <div>
                     <label>
